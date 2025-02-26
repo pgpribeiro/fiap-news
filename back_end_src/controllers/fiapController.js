@@ -33,10 +33,10 @@ class FiapController {
   static async listarNewsPorId (req, res) {
     try {
       const id = req.params.id;
-      const newEncontrada = await fiap.findById(id);
+      const newEncontrada = await fiap.find({ id: id });
       res.status(200).json(newEncontrada);
     } catch (erro) {
-      res.status(500).json({ message: `${erro.message} - falha na requisição do livro` });
+      res.status(500).json({ message: `${erro.message} - falha na requisição do news` });
     }
   };
 
@@ -45,7 +45,11 @@ class FiapController {
   static async atualizarNews (req, res) {
     try {
       const id = req.params.id;
-      await fiap.findByIdAndUpdate(id, req.body);
+      const newsAtualizada = await fiap.findOneAndUpdate(
+        { id: id }, // Busca pelo campo 'id' ao invés de '_id'
+        req.body, // Novos valores
+        { new: true } // Retorna o documento atualizado
+      );
       res.status(200).json({ message: "fiap atualizado" });
     } catch (erro) {
       res.status(500).json({ message: `${erro.message} - falha na atualização` });
