@@ -1,0 +1,22 @@
+.news {
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .news h3 {
+    font-size: 32px;
+    border-bottom: 4px solid #ed145b;
+    display: inline-block;
+    padding-bottom: 8px;
+    color: #a6b5bb;
+  }
+  
+  .news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+  }

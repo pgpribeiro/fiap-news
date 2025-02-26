@@ -1,0 +1,48 @@
+.card {
+    width: 320px;
+    flex: 0 0 320px; 
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card .cabecalho {
+    background-color: #0a0c0e;
+    border-radius: 10px 10px 0px 0px;
+    height: 200px; 
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .card .rodape {
+    background: #ffffff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 0px 0px 10px 10px;
+    padding: 20px;
+    height: 120px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .card .rodape h4 {
+    color: #ed145b;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .card .rodape h5 {
+    font-size: 16px;
+    line-height: 22px;
+    color: #0a0c0e;
+    margin: 0;
+  }
